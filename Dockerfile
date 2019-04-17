@@ -1,4 +1,4 @@
-FROM nginx
+FROM centos:latest
 COPY . usr/share/nginx/html
-RUN apt-get update
-RUN service nginx restart
+RUN yum -y update && yum -y install nginx
+RUN systemctl restart nginx
