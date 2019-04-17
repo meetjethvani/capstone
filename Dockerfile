@@ -1,4 +1,4 @@
-FROM centos:latest
-COPY . usr/share/nginx/html
-RUN yum -y update && yum -y install nginx
-RUN systemctl restart nginx
+FROM local/c7-systemd
+RUN yum -y install nginx; yum clean all; systemctl enable nginx.service
+EXPOSE 80
+CMD ["/usr/sbin/init"]
