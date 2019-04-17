@@ -8,6 +8,7 @@ pipeline {
         }
         stage('Build Docker Image:'){
             steps {
+                ssh root@webserver
                 sh 'docker build -t mmj25294/capstone:latest .' 
             }
         } 
