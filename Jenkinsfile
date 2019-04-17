@@ -6,11 +6,14 @@ pipeline {
                 echo "Current Build version no. ${env.BUILD_ID} on ${env.JENKINS_URL}"
             }
         }
-        stage('Build Docker Image:'){
-            steps {
-                sh 'ssh root@webserver'
-                sh 'docker build -t mmj25294/capstone:latest .' 
-            }
-        } 
+        stage('Email Notification:') {
+          mail bcc: '', body: '''Jenkins Alerts''', cc: '', from: '', replyTo: '', subject: 'Jenkins Job', to: 'mmj25294@gmail.com'  
+        }    
+       # stage('Build Docker Image:'){
+       #     steps {
+       #        sh 'ssh root@webserver'
+       #         sh 'docker build -t mmj25294/capstone:latest .' 
+       #     }
+       # } 
     }
 }
