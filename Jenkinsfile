@@ -5,11 +5,6 @@ pipeline {
             steps {
                 echo "Current Build version no. ${env.BUILD_ID} on ${env.JENKINS_URL}"
             }
-        stage('Build Docker image'){
-            steps {
-                sh 'docker build -t mmj25294/capstone:latest .'
-            }
         }
-    }
     }
 }
