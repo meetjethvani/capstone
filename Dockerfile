@@ -4,3 +4,5 @@ RUN yum -y --setopt=tsflags=nodocs update
 RUN yum -y --setopt=tsflags=nodocs install httpd
 RUN yum clean all
 RUN systemctl enable httpd.service
+EXPOSE 80
+EXPOSE 8080
