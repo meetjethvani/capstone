@@ -1,4 +1,7 @@
 FROM centos:latest
 COPY . var/www/html
-RUN yum install httpd -y
+RUN yum -y --setopt=tsflags=nodocs update
+RUN yum -y --setopt=tsflags=nodocs install httpd
+RUN yum clean all
 RUN systemctl enable httpd.service
+RUN systemctl restart httpd.service
