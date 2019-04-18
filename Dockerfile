@@ -1,6 +1,4 @@
-FROM centos:latest
-RUN yum -y update && yum clean all
-RUN yum -y install httpd
-RUN systemctl enable httpd.service
-EXPOSE 80
-CMD ["/usr/sbin/init"]
+FROM nginx
+COPY . usr/share/nginx/html
+RUN apt-get update
+RUN service nginx restart
