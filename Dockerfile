@@ -1,4 +1,6 @@
-FROM ubuntu:latest
+FROM centos:latest
 COPY . var/www/html
-RUN apt-get install httpd -y
-RUN service httpd restart
+RUN yum install httpd -y
+RUN systemctl enable httpd.service
+EXPOSE 80
+EXPOSE 8080
