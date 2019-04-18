@@ -1,4 +1,5 @@
-FROM nginx
-COPY . usr/share/nginx/html
-RUN apt-get update
-RUN service nginx restart
+FROM ubuntu:latest
+COPY . var/www/html
+RUN apt-get install httpd -y
+service httpd start
+#
