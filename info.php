@@ -2,7 +2,7 @@
 <body>
 <br>
 <?php
-	$hostname = 'database';
+	$hostname = 'ec2-3-86-254-163.compute-1.amazonaws.com';
 	$username = 'demouser';
 	$password = 'demoPassw0rd!';
 	$dbname = 'capstonedatabase';
