@@ -16,7 +16,7 @@
 		$Name=$_POST['Name'];
 		$City=$_POST['City'];
 	}
-	$query = "INSERT INTO demotable (Name, City) VALUES ('$Name', '$City')";
+	$query = "INSERT INTO capstonetable (Name, City) VALUES ('$Name', '$City')";
 	
 	if (!mysqli_query($dbconnect, $query)) {
         	die('An error occurred when submitting your review.');
