@@ -2,10 +2,10 @@
 <body>
 <br>
 <?php
-	$hostname = 'ec2-3-86-254-163.compute-1.amazonaws.com';
+	$hostname = '172.31.91.205';
 	$username = 'demouser';
 	$password = 'demoPassw0rd!';
-	$dbname = 'capstonedatabase';
+	$dbname = 'capstonedb';
 	$dbconnect = new mysqli($hostname, $username, $password, $dbname);
  	if ($dbconnect->connect_error) {
   	die("Error: " . $dbconnect->connect_error);
