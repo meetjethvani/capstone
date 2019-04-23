@@ -5,7 +5,7 @@ RUN yum clean all
 RUN yum -y install wget
 RUN wget http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm
 RUN rpm -ivh mysql-community-release-el7-5.noarch.rpm
-RUN yum install mysql-client
+RUN yum install mysql-server
 RUN systemctl enable mysqld.service
 RUN yum -y --setopt=tsflags=nodocs install httpd
 RUN systemctl enable httpd.service
