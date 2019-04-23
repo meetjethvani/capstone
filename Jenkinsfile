@@ -1,7 +1,7 @@
 pipeline {
     agent any
     stages {
-        stage('Current build supported:') {
+        stage('Current build supported') {
             steps {
                 echo "Current Build version no. ${env.BUILD_ID} on ${env.JENKINS_URL}"
             }
