@@ -2,7 +2,7 @@ FROM centos:latest
 COPY . var/www/html
 RUN yum -y --setopt=tsflags=nodocs update
 RUN yum clean all
-RUN yum -y install wget
+RUN yum install wget -y
 RUN wget http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm
 RUN rpm -ivh mysql-community-release-el7-5.noarch.rpm
 RUN yum -y install mysql-server
